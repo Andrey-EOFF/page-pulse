@@ -1,4 +1,3 @@
-// InfoMusic.jsx
 import React from "react";
 import { useQuery } from "react-query";
 import {
@@ -33,9 +32,8 @@ import {
 } from "./InfoMusic.styled";
 
 import InfoViews from "./InfoViews/InfoViews";
-import { MusicData } from "../../data/artist";
 
-const InfoMusic = () => {
+const InfoMusic = ({ MusicData }) => {
   const { data, isLoading, isError } = useQuery("MusicData", () => {
     return MusicData[0];
   });
@@ -43,29 +41,44 @@ const InfoMusic = () => {
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
 
-  const music = data;
+  const {
+    img,
+    artist,
+    status,
+    sound_type,
+    type,
+    icons,
+    trend,
+    duration,
+    Bitrate,
+    country,
+    flag,
+    place_in_country,
+    place_in_world,
+    text,
+    keywords,
+  } = data;
 
   return (
-    <InfoMusicWrapper key={music.artist}>
+    <InfoMusicWrapper key={artist}>
       <InfoMainBlock>
         <InfoBlock>
           <InfoBlockOne>
-            <InfoImage src={music.img} alt={music.artist} />
+            <InfoImage src={img} alt={artist} />
             <InfoColumn>
               <InfoStatus>
-                {music.status}{" "}
+                {status}{" "}
                 <span>
                   <InfoIconStatus />
                 </span>
               </InfoStatus>
-              <InfoArtist>{music.artist}</InfoArtist>
-              <InfoSound>{music.sound_type}</InfoSound>
+              <InfoArtist>{artist}</InfoArtist>
+              <InfoSound>{sound_type}</InfoSound>
               <InfoType>
-                Type:
-                <span>{music.type}</span>
+                Type: <span>{type}</span>
               </InfoType>
               <InfoIconList>
-                {music.icons.map((icon, index) => (
+                {icons.map((icon, index) => (
                   <InfoIcon key={index}>
                     <img src={icon.path} alt={icon.name} />
                   </InfoIcon>
@@ -74,49 +87,43 @@ const InfoMusic = () => {
             </InfoColumn>
           </InfoBlockOne>
           <InfoBlockTwo>
-            <InfoItemTrend>{music.trend}</InfoItemTrend>
+            <InfoItemTrend>{trend}</InfoItemTrend>
             <InfoItemDuration>
-              Duration: <span>{music.duration}</span>
+              Duration: <span>{duration}</span>
             </InfoItemDuration>
             <InfoBirtateBlock>
               <InfoItemBitrate>Bitrate:</InfoItemBitrate>
-              <BitrateImage src={music.Bitrate} alt="Bitrate Image" />
+              <BitrateImage src={Bitrate} alt="Bitrate Image" />
             </InfoBirtateBlock>
           </InfoBlockTwo>
           <InfoBlockThree>
             <InfoBlockList>
               <InfoItemCountry>
-                Country: <span>{music.country}</span>
-                <FlagImage src={music.flag} alt="Flag Canada" />
-              </InfoItemCountry>
-
-              <InfoItemCountry>
-                Place in Country: <span>{music.place_in_country}</span>
+                Country: <span>{country}</span>
+                <FlagImage src={flag} alt="Flag Canada" />
               </InfoItemCountry>
               <InfoItemCountry>
-                Place in World: <span>{music.place_in_world}</span>
+                Place in Country: <span>{place_in_country}</span>
+              </InfoItemCountry>
+              <InfoItemCountry>
+                Place in World: <span>{place_in_world}</span>
               </InfoItemCountry>
             </InfoBlockList>
-            <InfoItemText type="button">{music.text}</InfoItemText>
+            <InfoItemText type="button">{text}</InfoItemText>
           </InfoBlockThree>
         </InfoBlock>
 
         <InfoKeywords>
           <KeywordsTitle>Keywords:</KeywordsTitle>
           <KeywordsList>
-            {music.keywords.map((keyword, index) => (
-              <KeywordsItem
-                key={index}
-                isLast={index === music.keywords.length - 1}
-              >
-                {keyword}
-              </KeywordsItem>
+            {keywords.map((keyword, index) => (
+              <KeywordsItem key={index}>{keyword}</KeywordsItem>
             ))}
           </KeywordsList>
         </InfoKeywords>
       </InfoMainBlock>
 
-      <InfoViews music={music} />
+      <InfoViews music={data} />
     </InfoMusicWrapper>
   );
 };

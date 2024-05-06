@@ -4,10 +4,11 @@ import { Colors } from "../../styles/variables";
 import InfoIconInfo from "../../Images/svg/icon-info.svg";
 import IconA from "../../Images/svg/icon-a.svg";
 
-export const InfoMusicWrapper = styled.div`
+export const InfoMusicWrapper = styled.section`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 53px;
   background-color: ${Colors.BgColorMusic};
 `;
 
@@ -279,5 +280,5 @@ export const KeywordsItem = styled.li`
   padding: 4px 10px;
   background-color: ${Colors.BgColorSecond};
   border-radius: 20px;
-  margin-right: ${({ isLast }) => (isLast ? "0" : "5px")};
+  margin-right: 5px;
 `;

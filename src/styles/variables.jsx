@@ -11,6 +11,7 @@ export const Colors = {
   // Colors
 
   ColorWhite: " #FFFFFF",
+  ColorBlack: "#000000",
   ColorIconMenu: "#8D9095",
 
   ColorGrey: "#8E8F92",
