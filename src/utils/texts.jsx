@@ -30,3 +30,7 @@ export const RELATED_NOTIFY_TEXT =
 
 export const RECOMMENDATION_TITLE_FIRST = "Recommendations";
 export const RECOMMENDATION_TITLE_NEXT = "from AI";
+
+// export const RECOMMENDATION_TITLE_FIRST = "Recommendations";
+
+
