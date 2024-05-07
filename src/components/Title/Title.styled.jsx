@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../styles/variables";
 
 export const TitleStyle = styled.h2`
   padding-left: 34px;
@@ -11,6 +12,10 @@ export const TitleStyle = styled.h2`
   text-align: left;
 
   position: relative;
+
+  span {
+    color: ${Colors.ColorAkcentYelow};
+  }
 
   &::before {
     content: "";

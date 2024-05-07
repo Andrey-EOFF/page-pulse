@@ -7,6 +7,8 @@ import GrowsChart from "../GrowsChart/GrowsChart";
 
 import { MusicData } from "../../data/artist";
 import Audience from "../Audience/Audience";
+import Related from "../Related/Related";
+import Recomd from "../Recomendation/Recomd";
 
 const MainBlock = () => {
   return (
@@ -16,6 +18,8 @@ const MainBlock = () => {
         <InfoMusic MusicData={MusicData} />
         <GrowsChart />
         <Audience />
+        <Related />
+        <Recomd />
       </MainBlockWrapper>
     </div>
   );

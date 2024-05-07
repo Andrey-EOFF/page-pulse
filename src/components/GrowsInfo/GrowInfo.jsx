@@ -5,17 +5,18 @@ import {
   GrowAkcentTwo,
   GrowInfoItem,
   GrowInfoList,
-  GrowInfoTitle,
   GrowInfoWrapper,
   GrowItemText,
   GrowItemTextThree,
   GrowItemTextTwo,
 } from "./GrowInfo.styled";
+import { Colors } from "../../styles/variables";
 import * as texts from "../../utils/texts";
-
+import IconGrow from "../../Images/svg/icon-growth.svg";
 import IconThumbs from "../../Images/svg/icon-thumbs-up.svg";
 import IconStars from "../../Images/svg/icon-stars.svg";
 import IconLocation from "../../Images/svg/icon-location.svg";
+import Title from "../Title/Title";
 
 const GrowInfo = () => {
   const {
@@ -27,7 +28,9 @@ const GrowInfo = () => {
 
   return (
     <GrowInfoWrapper>
-      <GrowInfoTitle>{GROW_TITLE_TEXT}</GrowInfoTitle>
+      <Title color={Colors.ColorAkcentYelow} icon={IconGrow}>
+        {GROW_TITLE_TEXT}
+      </Title>
 
       <GrowInfoList>
         <GrowInfoItem>

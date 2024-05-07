@@ -1,37 +1,9 @@
 import styled from "styled-components";
 import { Colors } from "../../styles/variables";
 
-import IconGrow from "../../Images/svg/icon-growth.svg";
-
 export const GrowInfoWrapper = styled.div`
   width: 100%;
   margin-bottom: 24px;
-`;
-
-export const GrowInfoTitle = styled.h2`
-  padding-left: 34px;
-  margin-bottom: 15px;
-
-  color: ${Colors.ColorAkcentYelow};
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
-  text-align: left;
-
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    margin-right: 6px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    background-image: url(${IconGrow});
-    background-repeat: no-repeat;
-  }
 `;
 
 export const GrowInfoList = styled.ul`

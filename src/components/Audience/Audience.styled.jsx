@@ -3,7 +3,7 @@ import { Colors } from "../../styles/variables";
 
 export const AudienceWrapper = styled.section`
   width: 100%;
-  padding-bottom: 53px;
+  padding-bottom: 48px;
 `;
 
 export const List = styled.ul`
