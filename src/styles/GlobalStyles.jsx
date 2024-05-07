@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import { Colors } from "./variables";
 
 export const GlobalStyle = createGlobalStyle`
@@ -17,3 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     overflow: hidden;
   }
 `;
+
+export const Container = styled.div`
+   padding: 0px 40px 0px 36px;
+`

@@ -3,10 +3,10 @@ import { MainBlockWrapper } from "./MainBlock.styled";
 import Header from "../Header/Header";
 import InfoMusic from "../InfoMusic/InfoMusic";
 
-import GrowInfo from "../GrowsInfo/GrowInfo";
 import GrowsChart from "../GrowsChart/GrowsChart";
 
 import { MusicData } from "../../data/artist";
+import Audience from "../Audience/Audience";
 
 const MainBlock = () => {
   return (
@@ -14,8 +14,8 @@ const MainBlock = () => {
       <MainBlockWrapper>
         <Header />
         <InfoMusic MusicData={MusicData} />
-        <GrowInfo />
         <GrowsChart />
+        <Audience />
       </MainBlockWrapper>
     </div>
   );

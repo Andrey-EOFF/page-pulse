@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const Reset = createGlobalStyle`
   *,
@@ -17,6 +17,10 @@ const Reset = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  p {
+    margin: 0;
   }
 
   button {

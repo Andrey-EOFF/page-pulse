@@ -4,12 +4,10 @@ const barWidth = 69;
 const barHeight = 40;
 const xGap = 59;
 
-export const GrowsChartContainer = styled.div`
-  width: 875px;
-  margin: 0 auto;
-  color: white;
-  padding-left: 36px;
-  padding-right: 40px;
+export const GrowsChartWrapper = styled.section`
+  width: 100%;
+  color: ${Colors.ColorWhite};
+  padding-bottom: 53px;
 `;
 
 export const ChartTitle = styled.h2`

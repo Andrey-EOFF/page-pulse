@@ -14,3 +14,7 @@ export const CHART_TITLE_TEXT = "Posts, AI Prediction";
 export const DATE_RANGE_TITLE = "Date Range";
 export const GROWTH_OPTION = "Growth";
 export const AI_PREDICTION_OPTION = "AI Prediction";
+
+// SOUND AUDIENCE
+
+export const AUDIENCE_TITLE_TEXT = "Sound Audience";

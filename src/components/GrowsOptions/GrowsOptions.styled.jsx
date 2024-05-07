@@ -24,6 +24,7 @@ export const DateRangeTitle = styled.h3`
 `;
 
 export const Button = styled.button`
+  height: 32px;
   position: relative;
   display: flex;
   padding: 12px 31px 12px 15px;
@@ -40,8 +41,8 @@ export const Button = styled.button`
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    right: 10px;
+    top: 56%;
+    right: 12px;
     transform: translateY(-50%);
     width: 8px;
     height: 8px;
@@ -55,9 +56,10 @@ export const OptionsList = styled.ul`
 `;
 
 export const OptionItem = styled.li`
+  height: 32px;
   position: relative;
   display: flex;
-  padding: 12px 15px 12px 31px;
+  padding: 5px 15px 5px 20px;
   border-radius: 20px;
   align-items: center;
   background-color: ${Colors.BgColorSecond};
@@ -67,15 +69,24 @@ export const OptionItem = styled.li`
   line-height: 1.67;
   text-align: left;
 
-  &::before {
+  &.growth:before {
     content: "";
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
     border-radius: 50%;
-    background-color: black;
+
+    background-color: ${Colors.BgAkcentViolet};
+  }
+
+  &.prediction:before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: ${Colors.BgAkcentYelow};
   }
 `;

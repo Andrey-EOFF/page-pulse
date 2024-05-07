@@ -7,6 +7,8 @@ export const Colors = {
   BgColorMusic: "#131314",
   BgColorAkcentGreen: "#00BE6E",
   BgColorTextSound: "#3F3F41",
+  BgAkcentYelow: "#D1FD0A",
+  BgAkcentViolet: "#C704FE",
 
   // Colors
 

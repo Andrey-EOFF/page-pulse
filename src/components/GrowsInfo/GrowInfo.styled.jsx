@@ -3,8 +3,7 @@ import { Colors } from "../../styles/variables";
 
 import IconGrow from "../../Images/svg/icon-growth.svg";
 
-export const GrowInfoWrapper = styled.section`
-  padding-left: 34px;
+export const GrowInfoWrapper = styled.div`
   width: 100%;
   margin-bottom: 24px;
 `;

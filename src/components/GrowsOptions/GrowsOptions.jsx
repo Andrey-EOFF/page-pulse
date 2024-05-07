@@ -20,8 +20,8 @@ const GrowsOptions = () => {
       </DateRangeBlock>
 
       <OptionsList>
-        <OptionItem>{GROWTH_OPTION}</OptionItem>
-        <OptionItem>{AI_PREDICTION_OPTION}</OptionItem>
+        <OptionItem className="growth">{GROWTH_OPTION}</OptionItem>
+        <OptionItem className="prediction">{AI_PREDICTION_OPTION}</OptionItem>
       </OptionsList>
     </GrowsOptionsWrapper>
   );
