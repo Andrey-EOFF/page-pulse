@@ -1,7 +1,23 @@
 import React from "react";
 import { create } from "zustand";
-
-import { RelatedBlock, CheckboxList, NestedCheckbox } from "./CheckBox.styled";
+import {
+  CheckboxInput,
+  CheckboxLabel,
+  CheckboxList,
+  Checkmark,
+  NestedCheckbox,
+  RelatedBlock,
+} from "./CheckBox.styled";
+import {
+  CHECBOX_EIGHT,
+  CHECBOX_FIVE,
+  CHECBOX_FOUR,
+  CHECBOX_ONE,
+  CHECBOX_SEVEN,
+  CHECBOX_SIX,
+  CHECBOX_THREE,
+  CHECBOX_TWO,
+} from "../../utils/texts";
 
 const useCheckboxStore = create((set) => ({
   nestedChecked: false,
@@ -18,50 +34,53 @@ const Checkbox = () => {
   return (
     <RelatedBlock>
       <CheckboxList>
-        <label>
-          <input type="checkbox" />
-          Checkbox 1
-        </label>
-        <label>
-          <input type="checkbox" onChange={handleNestedCheckboxChange} />
-          Checkbox 2
+        <CheckboxLabel>
+          <CheckboxInput type="checkbox" />
+          <Checkmark className="checkmark" />
+          {CHECBOX_ONE}
+        </CheckboxLabel>
+        <CheckboxLabel>
+          <CheckboxInput
+            type="checkbox"
+            onChange={handleNestedCheckboxChange}
+          />
+          <Checkmark className="checkmark" />
+          {CHECBOX_TWO}
           {nestedChecked && (
             <NestedCheckbox>
-              <label>
-                <input type="checkbox" />
-                Nested Checkbox 1
-              </label>
-              <label>
-                <input type="checkbox" />
-                Nested Checkbox 2
-              </label>
+              <CheckboxLabel>
+                <CheckboxInput type="checkbox" />
+                <Checkmark className="checkmark" />
+                {CHECBOX_THREE}
+              </CheckboxLabel>
+              <CheckboxLabel>
+                <CheckboxInput type="checkbox" />
+                <Checkmark className="checkmark" />
+                {CHECBOX_FOUR}
+              </CheckboxLabel>
             </NestedCheckbox>
           )}
-        </label>
-        <label>
-          <input type="checkbox" />
-          Checkbox 3
-        </label>
-        <label>
-          <input type="checkbox" />
-          Checkbox 4
-        </label>
-        <label>
-          <input type="checkbox" />
-          Checkbox 5
-        </label>
-        <label>
-          <input type="checkbox" />
-          Checkbox 6
-        </label>
-        <label>
-          <input type="checkbox" />
-          Checkbox 7
-        </label>
-        <label>
-          <input type="checkbox" />
-          Checkbox 8
-        </label>
+        </CheckboxLabel>
+        <CheckboxLabel>
+          <CheckboxInput type="checkbox" />
+          <Checkmark className="checkmark" />
+          {CHECBOX_FIVE}
+        </CheckboxLabel>
+        <CheckboxLabel>
+          <CheckboxInput type="checkbox" />
+          <Checkmark className="checkmark" />
+          {CHECBOX_SIX}
+        </CheckboxLabel>
+        <CheckboxLabel>
+          <CheckboxInput type="checkbox" />
+          <Checkmark className="checkmark" />
+          {CHECBOX_SEVEN}
+        </CheckboxLabel>
+        <CheckboxLabel>
+          <CheckboxInput type="checkbox" />
+          <Checkmark className="checkmark" />
+          {CHECBOX_EIGHT}
+        </CheckboxLabel>
       </CheckboxList>
     </RelatedBlock>
   );

@@ -5,6 +5,7 @@ import useStore from "../../store/recomdStore";
 
 import IconRecomd from "../../Images/svg/icon-recommendation.svg";
 import SadSmile from "../../Images/img/sad-smile.png";
+import IconLock from "../../Images/icon-lock.svg";
 
 import {
   RECOMMENDATION_TITLE_FIRST,
@@ -49,6 +50,7 @@ const Recomd = () => {
             className={activeNavItem === "Advanced" ? "active" : ""}
           >
             Advanced
+            <img src={IconLock} alt="icon yelow lock" />
           </NavItem>
         </CheckBoxNav>
 

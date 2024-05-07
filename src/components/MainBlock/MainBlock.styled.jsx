@@ -4,5 +4,5 @@ import { Colors } from "../../styles/variables";
 export const MainBlockWrapper = styled.div`
   width: 950px;
   margin: 0 auto;
-  color: ${Colors.BgColorMain};
+  background-color: ${Colors.BgColorMain};
 `;

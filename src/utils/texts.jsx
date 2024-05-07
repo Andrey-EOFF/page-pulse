@@ -31,6 +31,15 @@ export const RELATED_NOTIFY_TEXT =
 export const RECOMMENDATION_TITLE_FIRST = "Recommendations";
 export const RECOMMENDATION_TITLE_NEXT = "from AI";
 
-// export const RECOMMENDATION_TITLE_FIRST = "Recommendations";
+// RECOMMENDATION AI CHECK BOX
+
+export const CHECBOX_ONE = "02:15 Recommendations for your song";
+export const CHECBOX_TWO = "Duration for segments of your sound promo";
+export const CHECBOX_THREE = "Duration for segments of your sound promo";
+export const CHECBOX_FOUR = "Duration for segments of your sound promo";
+export const CHECBOX_FIVE = "Release";
+export const CHECBOX_SIX = "Promotion";
+export const CHECBOX_SEVEN = "Duet";
+export const CHECBOX_EIGHT = "The best location for the potential of your sound";
 
 

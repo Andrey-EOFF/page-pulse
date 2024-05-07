@@ -20,10 +20,13 @@ export const CheckBoxNav = styled.ul`
 export const NavItem = styled.li`
   margin-right: 30px;
   cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
 
   &.active {
     color: #d1fd0a;
-    position: relative;
   }
 
   &.active::after {
@@ -33,6 +36,10 @@ export const NavItem = styled.li`
     left: 0;
     width: 100%;
     border-bottom: 2px solid #d1fd0a;
+  }
+
+  img {
+    margin-left: 6px;
   }
 `;
 
@@ -51,6 +58,8 @@ export const InfoCheckBaner = styled.div`
 
   img {
     margin-right: 10px;
+    width: 20px;
+    height: 20px;
   }
 `;
 
@@ -73,8 +82,10 @@ export const TextBanerMain = styled.div`
 `;
 
 export const TextBaner = styled.div`
-  color: ${Colors.BgColorSecond};
-
-  span {
-  }
+  color: ${Colors.ColorWhite};
+  min-height: 230px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.42;
+  text-align: center;
 `;
