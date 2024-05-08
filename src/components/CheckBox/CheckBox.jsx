@@ -3,8 +3,10 @@ import { create } from "zustand";
 import {
   CheckboxInput,
   CheckboxLabel,
+  CheckboxLabelLock,
   CheckboxList,
   Checkmark,
+  LabelLockText,
   NestedCheckbox,
   RelatedBlock,
 } from "./CheckBox.styled";
@@ -22,7 +24,10 @@ import {
 const useCheckboxStore = create((set) => ({
   nestedChecked: false,
   setNestedChecked: (isChecked) => set({ nestedChecked: isChecked }),
+
 }));
+
+console.log(useCheckboxStore)
 
 const Checkbox = () => {
   const { nestedChecked, setNestedChecked } = useCheckboxStore();
@@ -61,26 +66,29 @@ const Checkbox = () => {
             </NestedCheckbox>
           )}
         </CheckboxLabel>
-        <CheckboxLabel>
+        <CheckboxLabelLock>
           <CheckboxInput type="checkbox" />
           <Checkmark className="checkmark" />
           {CHECBOX_FIVE}
-        </CheckboxLabel>
+          <LabelLockText>Coming Soon</LabelLockText>
+        </CheckboxLabelLock>
         <CheckboxLabel>
           <CheckboxInput type="checkbox" />
           <Checkmark className="checkmark" />
           {CHECBOX_SIX}
         </CheckboxLabel>
-        <CheckboxLabel>
+        <CheckboxLabelLock>
           <CheckboxInput type="checkbox" />
           <Checkmark className="checkmark" />
           {CHECBOX_SEVEN}
-        </CheckboxLabel>
-        <CheckboxLabel>
+          <LabelLockText>Coming Soon</LabelLockText>
+        </CheckboxLabelLock>
+        <CheckboxLabelLock>
           <CheckboxInput type="checkbox" />
           <Checkmark className="checkmark" />
           {CHECBOX_EIGHT}
-        </CheckboxLabel>
+          <LabelLockText>Coming Soon</LabelLockText>
+        </CheckboxLabelLock>
       </CheckboxList>
     </RelatedBlock>
   );
