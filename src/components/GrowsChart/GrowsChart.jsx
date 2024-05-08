@@ -6,13 +6,14 @@ import { Container } from "../../styles/GlobalStyles";
 import {
   ChartTitle,
   ChartContainer,
-  XAxis,
-  XValue,
   YAxis,
   YValue,
   Bars,
   Bar,
   GrowsChartWrapper,
+  List,
+  Item,
+  ItemAkc,
 } from "./GrowsChart.styled";
 
 const GrowsChart = () => {
@@ -32,8 +33,7 @@ const GrowsChart = () => {
     "FR",
   ];
   const yValues = ["0", "100k", "200k", "300k", "400k", "500k"];
-  const barData = [50000];
-
+  const barData = ["21", "31", "41", "51", "61", "71", "81", "91", "101", 121];
   return (
     <GrowsChartWrapper>
       <Container>
@@ -45,18 +45,20 @@ const GrowsChart = () => {
               <YValue key={index}>{value}</YValue>
             ))}
           </YAxis>
-          <XAxis>
-            {xValues.map((value, index) => (
-              <XValue key={index}>{value}</XValue>
-            ))}
-          </XAxis>
-
           <Bars>
             {barData.map((value, index) => (
               <Bar key={index} value={value} />
             ))}
           </Bars>
         </ChartContainer>
+
+        <List>
+          {xValues.map((value, index) => (
+            <Item key={index} before={value}></Item>
+          ))}
+          <ItemAkc></ItemAkc>
+          <ItemAkc></ItemAkc>
+        </List>
 
         <GrowsOptions />
       </Container>

@@ -121,7 +121,7 @@ export const CheckboxInput = styled.input`
 
 export const Checkmark = styled.span`
   position: absolute;
-  left: 0;
+  left: 5px;
   height: 20px;
   width: 20px;
   background-color: inherit;
