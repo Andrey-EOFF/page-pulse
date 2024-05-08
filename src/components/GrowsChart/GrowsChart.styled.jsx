@@ -93,12 +93,12 @@ export const List = styled.ul`
   height: 182px;
   align-items: flex-end;
   gap: 4px;
-  bottom: -19px;
-  left: 190px;
+  bottom: 10px;
+  left: 60px;
 `;
 
 export const Item = styled.li`
-position: relative;
+  position: relative;
   width: 69px;
   height: 40px;
 
@@ -113,11 +113,10 @@ position: relative;
 
     color: ${Colors.ColorGrey};
 
-font-size: 10px;
-font-weight: 700;
-line-height: 2;
-text-align: center;
-
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 2;
+    text-align: center;
   }
 `;
 

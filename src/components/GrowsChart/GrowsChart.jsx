@@ -33,7 +33,18 @@ const GrowsChart = () => {
     "FR",
   ];
   const yValues = ["0", "100k", "200k", "300k", "400k", "500k"];
-  const barData = ["21", "31", "41", "51", "61", "71", "81", "91", "101", 121];
+  const barData = [
+    "21",
+    "31",
+    "41",
+    "51",
+    "61",
+    "71",
+    "81",
+    "91",
+    "101",
+    "121",
+  ];
   return (
     <GrowsChartWrapper>
       <Container>
@@ -50,15 +61,14 @@ const GrowsChart = () => {
               <Bar key={index} value={value} />
             ))}
           </Bars>
+          <List>
+            {xValues.map((value, index) => (
+              <Item key={index} before={value}></Item>
+            ))}
+            <ItemAkc></ItemAkc>
+            <ItemAkc></ItemAkc>
+          </List>
         </ChartContainer>
-
-        <List>
-          {xValues.map((value, index) => (
-            <Item key={index} before={value}></Item>
-          ))}
-          <ItemAkc></ItemAkc>
-          <ItemAkc></ItemAkc>
-        </List>
 
         <GrowsOptions />
       </Container>
