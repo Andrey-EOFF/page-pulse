@@ -24,10 +24,7 @@ import {
 const useCheckboxStore = create((set) => ({
   nestedChecked: false,
   setNestedChecked: (isChecked) => set({ nestedChecked: isChecked }),
-
 }));
-
-console.log(useCheckboxStore)
 
 const Checkbox = () => {
   const { nestedChecked, setNestedChecked } = useCheckboxStore();
